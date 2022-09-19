@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 16:48:21 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/19 16:58:54 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/13 11:03:34 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/09/13 16:40:01 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,32 @@
 
 // static void	test_del(void *elem)
 // {
-// 	size_t	size;
-// 	size_t	i;
-
-// 	size = sizeof(*elem);
-// 	i = 0;
-// 	while (i < size)
-// 	{
-// 		*(unsigned char *)(elem + i) = 0;
-// 		i++;
-// 	}
+// 	elem = 0;
 // }
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
+	if (lst && (*del))
+	{
+		(*del)(lst->content);
+		free(lst);
+	}
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	t_list	*elem;
-// 	int		data;
+	// t_list	*elem;
 
-// 	data = 42;
-// 	elem = malloc(sizeof(t_list));
-// 	if (!elem)
-// 		return (1);
-// 	elem->content = &data;
-// 	elem->next = 0;
-// 	printf("(before) %d\n", *(int *)elem->content);
-// 	ft_lstdelone(elem, &test_del);
-// 	printf("(after) %d\n", *(int *)elem->content);
-// 	printf("Let's try to free elem !\n");
-// 	free(elem);
+	// elem = (void *) malloc(sizeof(t_list));
+	// if (!elem)
+	// 	return (0);
+	// elem->content = "Je suis le contenu de l'element.";
+	// elem->next = 0;
+	// printf("Avant : %s a l'adresse ", (unsigned char *) elem->content);
+	// printf("%p\n", elem);
+	// ft_lstdelone(elem, &test_del);
+	// // printf("Apres : %s a l'adresse ", (unsigned char *) elem->content);
+	// printf("%p\n", elem);
 // }

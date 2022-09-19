@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 17:35:43 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/13 17:40:03 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/19 16:27:04 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/09/19 16:44:57 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,34 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*current;
-
-	current = lst;
-	while (current && current->next)
-		current = current->next;
-	return (current);
+	while (lst && lst->next)
+		lst = lst->next;
+	return (lst);
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	t_list	elem1;
-// 	t_list	elem2;
-// 	t_list	elem3;
+// 	char	*s1;
+// 	char	*s2;
+// 	t_list	*new1;
+// 	t_list	*new2;
+// 	t_list	**begin;
+// 	t_list	*current;
 
-// 	int	n1 = 4;
-// 	int	n2 = 8;
-// 	int	n3 = 15;
-// 	elem1.content = &n1;
-// 	elem1.next = &elem2;
-// 	elem2.content = &n2;
-// 	elem2.next = &elem3;
-// 	elem3.content = &n3;
-// 	elem3.next = 0;
-// 	printf("Dernier element : %d\n", *(int *) ft_lstlast(&elem1)->content);
+// 	s1 = "Titouan";
+// 	s2 = "Bonjour";
+// 	new1 = ft_lstnew(s1);
+// 	new2 = ft_lstnew(s2);
+// 	begin = &new1;
+// 	ft_lstadd_front(begin, new2);
+// 	current = *begin;
+// 	while (current)
+// 	{
+// 		printf("%s\n", (char *)current->content);
+// 		current = current->next;
+// 	}
+// 	printf("\n%s\n", (char *)(ft_lstlast(*begin))->content);
+// 	ft_lstlast(NULL);
 // }

@@ -1,44 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 16:13:53 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/19 16:23:17 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/13 17:30:27 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/09/13 17:34:38 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+int	ft_lstsize(t_list *lst)
 {
-	if (!alst || !(*alst) || !new)
-		return ;
-	new->next = *alst;
-	*alst = new;
+	int	count;
+
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	char	*s1;
-// 	char	*s2;
-// 	t_list	*new1;
-// 	t_list	*new2;
-// 	t_list	**begin;
+// 	t_list	elem1;
+// 	t_list	elem2;
+// 	t_list	elem3;
 
-// 	s1 = "Titouan";
-// 	s2 = "Bonjour";
-// 	new1 = ft_lstnew(s1);
-// 	new2 = ft_lstnew(s2);
-// 	begin = &new1;
-// 	ft_lstadd_front(begin, new2);
-// 	while (*begin)
-// 	{
-// 		printf("%s\n", (char *)(*begin)->content);
-// 		*begin = (*begin)->next;
-// 	}
+// 	int	n1 = 4;
+// 	int	n2 = 8;
+// 	int	n3 = 15;
+// 	elem1.content = &n1;
+// 	// elem1.next = &elem2;
+// 	// elem2.content = &n2;
+// 	// elem2.next = &elem3;
+// 	// elem3.content = &n3;
+// 	// elem3.next = 0;
+// 	printf("Nombre d'elemts : %d\n", ft_lstsize(&elem1));
 // }

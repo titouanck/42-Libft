@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 16:13:53 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/19 16:23:17 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/13 10:32:13 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/09/13 13:53:52 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+t_list	*ft_lstnew(void *content)
 {
-	if (!alst || !(*alst) || !new)
-		return ;
-	new->next = *alst;
-	*alst = new;
+	t_list	*new;
+
+	new = (void *) malloc(sizeof(content));
+	if (!new)
+		return (NULL);
+	new->content = (void *) content;
+	new->next = NULL;
+	return (new);
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	char	*s1;
-// 	char	*s2;
-// 	t_list	*new1;
-// 	t_list	*new2;
-// 	t_list	**begin;
+// 	t_list	*r;
+// 	char	*test;
+// 	int		nb;
 
-// 	s1 = "Titouan";
-// 	s2 = "Bonjour";
-// 	new1 = ft_lstnew(s1);
-// 	new2 = ft_lstnew(s2);
-// 	begin = &new1;
-// 	ft_lstadd_front(begin, new2);
-// 	while (*begin)
-// 	{
-// 		printf("%s\n", (char *)(*begin)->content);
-// 		*begin = (*begin)->next;
-// 	}
+// 	test = "Bonjour";
+// 	r = ft_lstnew((test));
+// 	printf("%s | %p\n", (char *) r->content, r->next);
+// 	free(r);
+// 	nb = 42;
+// 	r = ft_lstnew(&nb);
+// 	printf("%d | %p\n", *(int *) r->content, r->next);
 // }
