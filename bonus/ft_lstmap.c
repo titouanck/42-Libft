@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 17:16:14 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/19 17:54:14 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/09/20 12:29:20 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,6 @@ static t_list	*local_ft_lstnew(void *content)
 	return (new);
 }
 
-static void	local_ft_lstiter(t_list *lst, void (*f)(void *))
-{
-	while (lst && f)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
-}
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*start;
@@ -83,6 +74,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 	t_list	e1;
 // 	t_list	e2;
 // 	t_list	e3;
+// 	t_list	*current;
 // 	int		data1;
 // 	int		data2;
 // 	int		data3;
@@ -97,6 +89,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 	e2.next = &e3;
 // 	e3.next = 0;
 // 	t_list *new = ft_lstmap(&e1, &plus_one, &test_del);
+// 	current = &e1;
+// 	while (current)
+// 	{
+// 		printf("%d -> ", *(int *)current->content);
+// 		current = current->next;
+// 	}
+// 	printf("\n");
 // 	while (new)
 // 	{
 // 		printf("%d -> ", *(int *)new->content);
