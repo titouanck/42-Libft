@@ -6,24 +6,24 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:10:03 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/20 16:56:01 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/09/20 22:21:19 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static void	print_nb(long nb)
+static size_t	print_nb(long nb)
 {
 	if (nb / 10)
-	{
-		print_nb(nb / 10);
-		print_nb(nb % 10);
-	}
+		return (print_nb(nb / 10) + print_nb(nb % 10));
 	else
+	{
 		ft_putchar(nb + '0');
+		return (1);
+	}
 }
 
-void	ft_putnbr(const int n)
+size_t	ft_putnbr(const int n)
 {
 	long	nb;
 
@@ -32,6 +32,15 @@ void	ft_putnbr(const int n)
 	{
 		ft_putchar('-');
 		nb = -nb;
+		return (1 + print_nb(nb));
 	}
-	print_nb(nb);
+	else
+		return (print_nb(nb));
 }
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	printf("[%lu]\n", ft_putnbr(-0));
+// }

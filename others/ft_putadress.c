@@ -6,16 +6,16 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:41:38 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/20 17:21:21 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/09/20 22:25:41 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putadress(void *adress)
+size_t	ft_putadress(void *adress)
 {
 	ft_putstr("0x");
-	ft_puthexa_lower((unsigned long) adress);
+	return (2 + ft_puthexa_lower((unsigned long) adress));
 }
 
 // #include <stdio.h>
