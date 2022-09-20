@@ -1,48 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_puthexa_lower.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:39:18 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/20 16:56:45 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/20 17:21:01 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/09/20 17:24:31 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static void	print_nb(long nb, int fd)
+void	ft_puthexa_lower(const unsigned long n)
 {
-	if (nb / 10)
+	if (n / 16)
 	{
-		print_nb(nb / 10, fd);
-		print_nb(nb % 10, fd);
+		ft_puthexa_lower(n / 16);
+		ft_puthexa_lower(n % 16);
 	}
+	else if (!(n / 10))
+		ft_putchar(n + '0');
 	else
-		ft_putchar_fd(nb + '0', fd);
+		ft_putchar((char) n - 10 + 'a');
 }
 
-void	ft_putnbr_fd(int n, int fd)
-{
-	long	nb;
-
-	nb = n;
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb = -nb;
-	}
-	print_nb(nb, fd);
-}
+// #include <stdio.h>
 
 // int	main(void)
 // {
-// 	int	fd;
-
-// 	fd = open("test.txt", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
-// 	if (fd == -1)
-// 		return (1);
-// 	ft_putstr("...\n");
-// 	ft_putnbr_fd(42, fd);
+// 	ft_puthexa_lower(423413568887654);
 // }

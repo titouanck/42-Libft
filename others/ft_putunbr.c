@@ -1,48 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:39:18 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/20 16:56:45 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/12 18:10:03 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/09/20 16:56:28 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static void	print_nb(long nb, int fd)
+void	ft_putunbr(const unsigned int n)
 {
-	if (nb / 10)
+	if (n / 10)
 	{
-		print_nb(nb / 10, fd);
-		print_nb(nb % 10, fd);
+		ft_putunbr(n / 10);
+		ft_putunbr(n % 10);
 	}
 	else
-		ft_putchar_fd(nb + '0', fd);
-}
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	long	nb;
-
-	nb = n;
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb = -nb;
-	}
-	print_nb(nb, fd);
+		ft_putchar(n + '0');
 }
 
 // int	main(void)
 // {
-// 	int	fd;
-
-// 	fd = open("test.txt", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
-// 	if (fd == -1)
-// 		return (1);
-// 	ft_putstr("...\n");
-// 	ft_putnbr_fd(42, fd);
+// 	ft_putunbr(10);
 // }

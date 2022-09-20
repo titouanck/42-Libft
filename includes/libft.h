@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:13:35 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/14 01:25:05 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/09/20 17:23:21 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,12 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
+/* other functions */
+void	ft_putchar(const char c);
+void	ft_putstr(const char *str);
+void	ft_putnbr(const int n);
+void	ft_putunbr(const unsigned int n);
+void	ft_puthexa_lower(const unsigned long n);
+void	ft_puthexa_upper(const unsigned long n);
+void	ft_putadress(void *adress);
 #endif

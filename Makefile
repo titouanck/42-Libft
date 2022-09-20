@@ -1,4 +1,4 @@
-SRCS = $(wildcard ./libc/*.c) $(wildcard ./additional/*.c)
+SRCS = $(wildcard ./libc/*.c) $(wildcard ./additional/*.c) $(wildcard ./others/*.c)
 
 SRCSBONUS = ${SRCS} $(wildcard ./bonus/*.c) 
 
