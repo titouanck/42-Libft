@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:10:56 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/20 22:10:57 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:53:38 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 size_t	ft_putchar(const char c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
