@@ -6,11 +6,11 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:10:03 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:21:57 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:59:34 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/libft_others.h"
 
 static size_t	print_nb(long nb)
 {

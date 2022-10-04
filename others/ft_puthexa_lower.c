@@ -6,11 +6,11 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:21:01 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:21:50 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:59:28 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/libft_others.h"
 
 size_t	ft_puthexa_lower(const unsigned int n)
 {

@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 14:10:56 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:59:25 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/19 16:27:04 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/10/04 23:55:37 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft_others.h"
+#include "../includes/libft_bonus.h"
 
-size_t	ft_putchar(const char c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	return (write(1, &c, 1));
+	while (lst && lst->next)
+		lst = lst->next;
+	return (lst);
 }

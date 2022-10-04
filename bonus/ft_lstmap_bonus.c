@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 16:21:49 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:28:39 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/19 17:16:14 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/10/04 23:55:40 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/libft_bonus.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	size;
+	t_list	*start;
+	t_list	*current;
 
-	size = 0;
-	while (lst)
+	if (!lst || !f || !del)
+		return (NULL);
+	start = ft_lstnew(f(lst->content));
+	current = start;
+	while (lst && lst->next)
 	{
-		size++;
+		if (!current)
+			return (NULL);
+		current->next = ft_lstnew(f(lst->next->content));
+		current = current->next;
 		lst = lst->next;
 	}
-	return (size);
+	return (start);
 }

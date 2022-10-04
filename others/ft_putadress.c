@@ -6,11 +6,11 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:41:38 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:21:43 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:59:22 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/libft_others.h"
 
 static size_t	printadress(const unsigned long n)
 {

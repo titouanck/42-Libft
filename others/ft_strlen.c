@@ -6,11 +6,11 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:16:57 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:22:06 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:59:42 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/libft_others.h"
 
 size_t	ft_strlen(const char *s)
 {
