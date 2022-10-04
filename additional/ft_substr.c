@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:39:00 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/13 14:24:21 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 19:00:56 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*new;
-	size_t	i;
+	char			*new;
+	unsigned int	i;
 
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	new = malloc(sizeof(char) * (len + 1));
 	if (!new)
 		return (NULL);
 	i = 0;
-	while (i < len && s[start + i])
+	while (start + i < ft_strlen(s) && i < len)
 	{
 		new[i] = s[start + i];
 		i++;
@@ -37,7 +39,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	char	*str;
 // 	char	*new;
 
-// 	str = "Voici une phrase.";
-// 	new = ft_substr(str, 6, 10);
+// 	str = "tripouille";
+// 	new = ft_substr(str, 100, 1);
 // 	printf("%s", new);
 // }

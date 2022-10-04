@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:39:18 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/20 16:56:45 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 19:28:50 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 	nb = n;
 	if (nb < 0)
 	{
-		write(1, "-", 1);
+		write(fd, "-", 1);
 		nb = -nb;
 	}
 	print_nb(nb, fd);
@@ -44,5 +44,19 @@ void	ft_putnbr_fd(int n, int fd)
 // 	if (fd == -1)
 // 		return (1);
 // 	ft_putstr("...\n");
+// 	ft_putnbr_fd(4, fd);
+// 	ft_putnbr_fd(8, fd);
+// 	ft_putnbr_fd(15, fd);
+// 	ft_putnbr_fd(16, fd);
+// 	ft_putnbr_fd(23, fd);
 // 	ft_putnbr_fd(42, fd);
+// 	ft_putnbr_fd(0, fd);
+// 	ft_putnbr_fd(-1, fd);
+// 	ft_putnbr_fd(-10, fd);
+// 	ft_putnbr_fd(42, fd);
+// 	ft_putnbr_fd(10, fd);
+// 	ft_putnbr_fd(9, fd);
+
+
+
 // }

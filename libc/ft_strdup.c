@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 16:37:35 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/10 16:49:04 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 15:30:09 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s1)
 	char	*new;
 	size_t	i;
 
-	new = malloc(sizeof(char) * (ft_strlen(new) + 1));
+	new = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!new)
 		return (NULL);
 	i = 0;
@@ -26,6 +26,7 @@ char	*ft_strdup(const char *s1)
 		new[i] = s1[i];
 		i++;
 	}
+	new[i] = '\0';
 	return (new);
 }
 
@@ -33,5 +34,11 @@ char	*ft_strdup(const char *s1)
 
 // int	main(void)
 // {
-// 	printf("%s : %s\n", strdup("Bonjour !"), ft_strdup("Bonjour !"));
+// 	char	*s1 = strdup("coucou");
+// 	char	*s2 = ft_strdup("coucou");
+
+// 	printf("%s : %s\n", s1, s2);
+// 	s1[0] = 'a';
+// 	s2[0] = 'a';
+// 	printf("%s : %s\n", s1, s2);
 // }

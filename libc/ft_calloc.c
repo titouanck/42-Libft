@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:53:43 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/13 15:18:29 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 15:09:57 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,24 @@ static void	*ft_memalloc(size_t size)
 	return (new);
 }
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
+	if ((count == SIZE_MAX && size > 1) || (size == SIZE_MAX && count > 1))
+		return (NULL);
 	return (ft_memalloc(count * size));
 }
 
 // #include <stdio.h>
 
 // int	main(void)
-// {
-// 	void	*r = ft_memalloc(18);
+// {	
+	// void	*c = calloc(SIZE_MAX, SIZE_MAX);
+	// void	*ft_c = ft_calloc(SIZE_MAX, SIZE_MAX);
 
-// 	printf("%p\n", r);
-// 	free(r);
+	// printf("llu : %llu\n", (unsigned long long) SIZE_MAX + 1);
+	// printf("%p, %p\n", c, ft_c);
+	// if (c)
+	// 	free(c);
+	// if (ft_c)
+	// 	free(ft_c);
 // }

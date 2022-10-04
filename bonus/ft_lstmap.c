@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 17:16:14 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/20 12:29:20 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/09/29 13:13:11 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	current = start;
 	while (lst && lst->next)
 	{
+		if (!current)
+			return (NULL);
 		current->next = local_ft_lstnew(f(lst->next->content));
 		current = current->next;
 		lst = lst->next;

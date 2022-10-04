@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:23:06 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/13 17:19:30 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 19:25:35 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static char	*find_end(char const *s1, char const *set, char const *begin)
 	in_set = 0;
 	i = ft_strlen(s1) - 1;
 	j = 0;
-	while (s1 + i != begin)
+	while (s1 + i >= begin)
 	{
 		in_set = 0;
 		j = 0;
@@ -61,6 +61,8 @@ static char	*find_end(char const *s1, char const *set, char const *begin)
 			break ;
 		i--;
 	}
+	if (s1 + i < begin)
+		return ((char *) begin);
 	return ((char *) s1 + i);
 }
 
@@ -69,11 +71,11 @@ static char	*fill_str(char const *begin, char const *end)
 	char	*new;
 	size_t	i;
 
-	new = malloc(sizeof(char) * (end - begin + 1));
+	new = malloc(sizeof(char) * (end - begin + 2));
 	if (!new)
 		return (NULL);
 	i = 0;
-	while (begin + i < end)
+	while (begin + i <= end)
 	{
 		new[i] = begin[i];
 		i++;
@@ -89,9 +91,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	begin = find_begin(s1, set);
 	end = find_end(s1, set, begin);
-	if (begin == end)
+	if (end < begin)
 	{
 		new = malloc(sizeof(char) * 1);
+		if (!new)
+			return (NULL);
 		new[0] = '\0';
 	}
 	else
@@ -107,7 +111,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 // {
 // 	char	*str;
 
-// 	str = "";
+// 	str = "     xxx x x x xx   ";
 // 	printf("1: %s\n", str);
-// 	printf("2: %s\n", ft_strtrim(str, "wefgrhetnr"));
+// 	printf("2: %s\n", ft_strtrim(str, " x"));
 // }
