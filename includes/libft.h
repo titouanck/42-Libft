@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:13:35 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 13:24:40 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:41:15 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,16 @@ void	ft_lstadd_back(t_list **alst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* other functions */
 size_t	ft_putchar(const char c);
 size_t	ft_putstr(const char *str);
 size_t	ft_putnbr(const int n);
 size_t	ft_putunbr(const unsigned int n);
-size_t	ft_puthexa_lower(const unsigned long n);
-size_t	ft_puthexa_upper(const unsigned long n);
+size_t	ft_puthexa_lower(const unsigned int n);
+size_t	ft_puthexa_upper(const unsigned int n);
 size_t	ft_putadress(void *adress);
+size_t	ft_strlen(const char *s);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 18:04:25 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/10 18:21:57 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:30:29 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *) s + i);
 	return (NULL);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%p\n", ft_strchr("bonjour toi !", '\0'));
-// 	printf("%p", strchr("bonjour toi !", '\0'));
-// }

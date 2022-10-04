@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:28:03 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 15:41:30 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:30:39 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int	main(void)
-// {
-// 	char	dest[] = "Une destination";
-// 	char	src[] = "Une source";
-// 	printf("%lu \n", strlcpy(dest, src, -1));
-// }

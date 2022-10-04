@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:04:08 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/19 16:23:48 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:28:36 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*str;
-// 	t_list	*new;
-
-// 	str = "Bonjour";
-// 	new = ft_lstnew(str);
-// 	printf("%s\n", (char *)new->content);
-// }

@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:39:00 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 19:00:56 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:29:30 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new[i] = '\0';
 	return (new);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*str;
-// 	char	*new;
-
-// 	str = "tripouille";
-// 	new = ft_substr(str, 100, 1);
-// 	printf("%s", new);
-// }

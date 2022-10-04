@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:23:06 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 19:25:35 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:29:26 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,14 +104,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (new);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*str;
-
-// 	str = "     xxx x x x xx   ";
-// 	printf("1: %s\n", str);
-// 	printf("2: %s\n", ft_strtrim(str, " x"));
-// }

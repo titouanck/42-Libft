@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:16:57 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/09 15:23:38 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:30:42 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%lu : %lu\n", ft_strlen("Bonjour."), strlen("Bonjour."));
-// 	printf("%lu : %lu\n", ft_strlen(""), strlen(""));
-// }

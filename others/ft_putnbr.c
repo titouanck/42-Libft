@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:10:03 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/22 14:58:22 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:21:57 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,3 @@ size_t	ft_putnbr(const int n)
 	else
 		return (print_nb(nb));
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("[%lu]\n", ft_putnbr(-0));
-// }

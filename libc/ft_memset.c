@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 14:20:37 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/03 16:45:24 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:30:25 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,39 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int	src;
-// 	int	dest;
-
-// 	src = -1;
-// 	dest = 21;
-// 	ft_memset(&dest, src, sizeof(int));
-// 	printf("%d : ", dest);
-// 	memset(&dest, src, sizeof(int));
-// 	printf("%d\n", dest);
-
-// 	src = 0;
-// 	dest = 21;
-// 	ft_memset(&dest, src, sizeof(int));
-// 	printf("%d : ", dest);
-// 	memset(&dest, src, sizeof(int));
-// 	printf("%d\n", dest);
-
-// 	src = 1;
-// 	dest = 21;
-// 	ft_memset(&dest, src, sizeof(int));
-// 	printf("%d : ", dest);
-// 	memset(&dest, src, sizeof(int));
-// 	printf("%d\n", dest);
-
-// 	src = 42;
-// 	dest = 21;
-// 	ft_memset(&dest, src, sizeof(int));
-// 	printf("%d : ", dest);
-// 	memset(&dest, src, sizeof(int));
-// 	printf("%d\n", dest);
-// }

@@ -6,13 +6,13 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:21:01 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/20 22:23:51 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:21:50 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-size_t	ft_puthexa_lower(const unsigned long n)
+size_t	ft_puthexa_lower(const unsigned int n)
 {
 	if (n / 16)
 		return (ft_puthexa_lower(n / 16) + ft_puthexa_lower(n % 16));
@@ -22,10 +22,3 @@ size_t	ft_puthexa_lower(const unsigned long n)
 		ft_putchar((char) n - 10 + 'a');
 	return (1);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	ft_puthexa_lower(423413568887654);
-// }

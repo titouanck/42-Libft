@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 01:26:38 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/11 01:33:16 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:30:01 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
-// #include <ctype.h>
-
-// int	main(void)
-// {
-// 	printf("%d : %d\n", isprint(0), ft_isprint(0));
-// 	printf("%d : %d\n", isprint(-4), ft_isprint(-4));
-// 	printf("%d : %d\n", isprint(12), ft_isprint(12));
-// 	printf("%d : %d\n", isprint(98), ft_isprint(98));
-// 	printf("%d : %d\n", isprint(127), ft_isprint(127));
-// 	printf("%d : %d\n", isprint(0), ft_isprint(0));
-// }

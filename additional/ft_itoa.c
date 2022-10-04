@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:53:25 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/12 18:04:07 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:28:48 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,16 +63,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_itoa(-2147483648));
-// 	printf("%s\n", ft_itoa(2147483647));
-// 	printf("%s\n", ft_itoa(0));
-// 	printf("%s\n", ft_itoa(-1));
-// 	printf("%s\n", ft_itoa(1));
-// 	printf("%s\n", ft_itoa(2));
-// 	printf("%s\n", ft_itoa(2048));
-// }

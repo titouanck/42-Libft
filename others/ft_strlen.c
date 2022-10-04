@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunbr.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:10:03 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:22:03 by tchevrie         ###   ########.fr       */
+/*   Created: 2022/09/09 15:16:57 by tchevrie          #+#    #+#             */
+/*   Updated: 2022/10/04 23:22:06 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-size_t	ft_putunbr(const unsigned int n)
+size_t	ft_strlen(const char *s)
 {
-	if (n / 10)
-		return (ft_putunbr(n / 10) + ft_putunbr(n % 10));
-	else
-		return (ft_putchar(n + '0'));
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

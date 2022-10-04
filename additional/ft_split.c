@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:56:46 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/13 17:23:20 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:29:07 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,18 +81,3 @@ char	**ft_split(char const *s, char c)
 	set_mem(tab, s, c);
 	return (tab);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	char	**tab;
-
-// 	if (argc != 3)
-// 		return (1);
-// 	tab = ft_strsplit("     ", ' ');
-// 	printf("%s", tab[0]);
-// 	// printf("%s", tab[1]);
-// 	// printf("%s", tab[2]);
-// 	if (tab[0] == 0)
-// 		printf("Success\n");
-
-// }

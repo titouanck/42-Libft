@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:48:12 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/09/12 13:12:33 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:29:12 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new[i + j] = '\0';
 	return (new);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*s1;
-// 	char	*s2;
-// 	char	*new;
-
-// 	s1 = "Une premiere phrase ici, ";
-// 	s2 = "une autre la.";
-// 	new = ft_strjoin(s1, s2);
-// 	printf("s1 : %s\n", s1);
-// 	printf("s2 : %s\n", s2);
-// 	printf("NEW : %s\n", new);
-// }

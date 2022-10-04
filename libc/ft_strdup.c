@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 16:37:35 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 15:30:09 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/04 23:30:32 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ char	*ft_strdup(const char *s1)
 	new[i] = '\0';
 	return (new);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*s1 = strdup("coucou");
-// 	char	*s2 = ft_strdup("coucou");
-
-// 	printf("%s : %s\n", s1, s2);
-// 	s1[0] = 'a';
-// 	s2[0] = 'a';
-// 	printf("%s : %s\n", s1, s2);
-// }
