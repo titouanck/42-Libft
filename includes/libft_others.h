@@ -6,14 +6,14 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 23:57:38 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:58:52 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/05 00:06:16 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_OTHERS_H
 # define LIBFT_OTHERS_H
 
-# include "libft_bonus.h"
+# include "libft.h"
 
 size_t	ft_putchar(const char c);
 size_t	ft_putstr(const char *str);
