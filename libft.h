@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:13:35 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/05 04:55:54 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/05 05:16:20 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h> 
+
+# include "libft_bonus.h"
 
 /* libc functions */
 void	*ft_memset(void *b, int c, size_t len);
@@ -67,5 +69,6 @@ size_t	ft_putunbr(const unsigned int n);
 size_t	ft_puthexa_lower(const unsigned int n);
 size_t	ft_puthexa_upper(const unsigned int n);
 size_t	ft_putadress(void *adress);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif

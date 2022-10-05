@@ -6,14 +6,12 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:13:35 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/04 23:58:41 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/05 05:06:56 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_BONUS_H
 # define LIBFT_BONUS_H
-
-# include "libft.h"
 
 typedef struct s_list
 {

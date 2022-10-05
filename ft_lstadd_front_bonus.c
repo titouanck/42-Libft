@@ -6,11 +6,11 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:13:53 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/05 04:47:41 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/05 05:07:42 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
