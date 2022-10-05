@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:13:35 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/05 05:16:20 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/10/05 15:24:10 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
@@ -69,6 +70,5 @@ size_t	ft_putunbr(const unsigned int n);
 size_t	ft_puthexa_lower(const unsigned int n);
 size_t	ft_puthexa_upper(const unsigned int n);
 size_t	ft_putadress(void *adress);
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
