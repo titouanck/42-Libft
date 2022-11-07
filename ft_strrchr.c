@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 18:25:56 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/05 04:32:47 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:28:30 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,12 @@ char	*ft_strrchr(const char *s, int c)
 
 	if (!s)
 		return (NULL);
-	i = ft_strlen(s);
+	i = ft_strlen(s) - 1;
 	while (i >= 0)
 	{
 		if (s[i] == (char) c)
-			break ;
+			return ((char *) s + i);
 		i--;
 	}
-	if (s[i] == (char) c)
-		return ((char *) s + i);
 	return (NULL);
 }
