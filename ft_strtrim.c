@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:23:06 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/05 05:24:50 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/11/07 16:36:04 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*new;
 
 	begin = find_begin(s1, set);
-	end = find_end(s1, set, begin);
-	if (end < begin)
+	end = find_end(s1, set, s1);
+	if (!s1[0] || end < begin)
 	{
 		new = malloc(sizeof(char) * 1);
 		if (!new)
