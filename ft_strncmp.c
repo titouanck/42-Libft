@@ -6,7 +6,7 @@
 /*   By: tchevrie <tchevrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 00:07:34 by tchevrie          #+#    #+#             */
-/*   Updated: 2022/10/05 04:32:47 by tchevrie         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:34:31 by tchevrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (s1[i] && s1[i] == s2[i] && i < n)
 		i++;
 	if (i < n)
-		return (s1[i] - s2[i]);
+		return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 	return (0);
 }
